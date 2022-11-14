@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ksbm_astroexpert">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher1"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher1_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="LockedOrientationActivity"
+        tools:replace="android:allowBackup,android:usesCleartextTraffic"
+        tools:targetApi="n">
+
+
+        <activity android:name=".Chat.activity.OrderHistory_Activity"></activity>
+        <activity android:name=".ui.ShareJourney" />
+        <activity android:name=".ui.Astrodetails.SlidingAstroDetailsLIst" />
+        <service android:name=".Astrologer.OnClearFromRecentService"
+            android:stopWithTask="false"/>
+        <activity android:name=".Chat.RegisterUser"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Chat.RegisterUser1"
+            android:screenOrientation="portrait" />
+
+
+        <receiver
+            android:name=".InternetCheck.ConnectivityReceiver"
+            android:label="NoInternetConnection">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            -->
+<!--        </activity>-->
+        <activity android:name=".ui.home.EnquiryME"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".Astrologer.ProfileUpdate"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.home.TestimonialMain"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.Setting.Settings"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.RemidesDetails.RemidesDetails"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.home.Testimonials"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.Review.ADDRatting"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Chat.Chatactivitypro"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Support.Supportchat"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.home.UserProfile"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.home.ViewAllAstrologer"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.Wallet.RechargeWallet"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.Astrodetails.Astrologerdetails"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Astrologer.Astrologer"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.splash.SplashActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.signup.SignUpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".Astrologer.CallRequest.Call_request"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.signin.SignInActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.otpverification.OTPVerificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".notification.NotificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.about.AboutActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.faqs.FAQsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.howorks.HowItWorksActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contactus.ContactUsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.privacy.PrivacyPolicyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.blog.BlogDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <receiver
+            android:name=".ui.otpverification.MySMSBroadCastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.agentprofile.AgentProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Chat.MainActivityChat"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Chat.activity.ProfileActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.webdealsoft.moodsapp_PROFILE_TARGET_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Chat.activity.UsersActivity"
+            android:parentActivityName=".Chat.MainActivityChat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Chat.activity.ChatActivity"
+            android:parentActivityName=".Chat.MainActivityChat"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="_CHAT_TARGET_NOTIFICATION" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Chat.activity.FullScreenActivity" />
+        <activity android:name=".ui.Wallet.Wallethistory"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.home.JourneyCategory" />
+        <!--
+   <service android:name=".FCM.FCMService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        -->
+        <activity
+            android:name=".notification.NotificationDialog"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".notification.NotificationCallsDialog"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <service android:name=".notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_s3oxLIxxZxksxM" />
+    </application>
+
+</manifest>

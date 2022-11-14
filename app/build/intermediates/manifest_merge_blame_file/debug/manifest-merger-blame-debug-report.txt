@@ -1,0 +1,859 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ksbm_astroexpert"
+4    android:versionCode="2"
+5    android:versionName="1.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:6:5-79
+11-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:6:22-76
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:6:5-79
+12-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:8:5-67
+13-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:8:22-64
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:9:5-65
+14-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:9:22-62
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+15-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:10:5-80
+15-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:10:22-77
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:11:5-81
+16-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:11:22-78
+17
+18    <supports-screens
+18-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:13:5-18:40
+19        android:anyDensity="true"
+19-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:14:9-34
+20        android:largeScreens="true"
+20-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:15:9-36
+21        android:normalScreens="true"
+21-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:16:9-37
+22        android:smallScreens="true"
+22-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:17:9-36
+23        android:xlargeScreens="true" />
+23-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:18:9-37
+24
+25    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Require below permissions for reading sms and otp assist feature -->
+25-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:13:5-76
+25-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:13:22-73
+26    <!--
+27    <uses-permission android:name="android.permission.READ_SMS" />
+28    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+29    -->
+30    <uses-feature
+30-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:24:5-26:36
+31        android:name="android.hardware.telephony"
+31-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:25:9-50
+32        android:required="false" />
+32-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:26:9-33
+33
+34    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+34-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:24:5-68
+34-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:24:22-65
+35    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+35-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:26:5-82
+35-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:26:22-79
+36    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+36-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:26:5-110
+36-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:26:22-107
+37
+38    <application
+38-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:20:5-226:19
+39        android:name="com.ksbm_astroexpert.App"
+39-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:21:9-28
+40        android:allowBackup="true"
+40-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:22:9-35
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.2.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ba20a610573218d4e8dc587bd5d33f60\core-1.2.0\AndroidManifest.xml:24:18-86
+42        android:debuggable="true"
+43        android:fullBackupContent="false"
+43-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:23:9-42
+44        android:icon="@mipmap/ic_launcher1"
+44-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:24:9-44
+45        android:label="@string/app_name"
+45-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:25:9-41
+46        android:requestLegacyExternalStorage="true"
+46-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:26:9-52
+47        android:roundIcon="@mipmap/ic_launcher1_round"
+47-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:27:9-55
+48        android:supportsRtl="true"
+48-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:28:9-35
+49        android:testOnly="true"
+50        android:theme="@style/AppTheme"
+50-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:29:9-40
+51        android:usesCleartextTraffic="true"
+51-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:30:9-44
+52        android:windowSoftInputMode="adjustPan" >
+52-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:30:9-48
+53        <activity android:name="com.ksbm_astroexpert.Chat.activity.OrderHistory_Activity" />
+53-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:36:9-82
+53-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:36:19-70
+54        <activity android:name="com.ksbm_astroexpert.ui.ShareJourney" />
+54-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:37:9-53
+54-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:37:19-50
+55        <activity android:name="com.ksbm_astroexpert.ui.Astrodetails.SlidingAstroDetailsLIst" />
+55-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:38:9-77
+55-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:38:19-74
+56
+57        <service
+57-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:39:9-40:43
+58            android:name="com.ksbm_astroexpert.Astrologer.OnClearFromRecentService"
+58-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:39:18-69
+59            android:stopWithTask="false" />
+59-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:40:13-41
+60
+61        <activity
+61-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:41:9-42:52
+62            android:name="com.ksbm_astroexpert.Chat.RegisterUser"
+62-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:41:19-52
+63            android:screenOrientation="portrait" />
+63-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:42:13-49
+64        <activity
+64-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:43:9-44:52
+65            android:name="com.ksbm_astroexpert.Chat.RegisterUser1"
+65-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:43:19-53
+66            android:screenOrientation="portrait" />
+66-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:44:13-49
+67
+68        <receiver
+68-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:47:9-53:20
+69            android:name="com.ksbm_astroexpert.InternetCheck.ConnectivityReceiver"
+69-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:48:13-63
+70            android:label="NoInternetConnection" >
+70-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:49:13-49
+71            <intent-filter>
+71-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:50:13-52:29
+72                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+72-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:51:17-79
+72-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:51:25-76
+73            </intent-filter>
+74        </receiver>
+75
+76        <!--
+77            <intent-filter>
+78                <action android:name="android.intent.action.MAIN"/>
+79                <category android:name="android.intent.category.LAUNCHER"/>
+80            </intent-filter>
+81        -->
+82        <!-- </activity> -->
+83        <activity
+83-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:62:9-63:52
+84            android:name="com.ksbm_astroexpert.ui.home.EnquiryME"
+84-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:62:19-52
+85            android:screenOrientation="portrait" />
+85-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:63:13-49
+86        <activity
+86-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:65:9-66:52
+87            android:name="com.ksbm_astroexpert.Astrologer.ProfileUpdate"
+87-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:65:19-59
+88            android:screenOrientation="portrait" />
+88-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:66:13-49
+89        <activity
+89-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:67:9-68:52
+90            android:name="com.ksbm_astroexpert.ui.home.TestimonialMain"
+90-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:67:19-58
+91            android:screenOrientation="portrait" />
+91-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:68:13-49
+92        <activity
+92-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:69:9-70:52
+93            android:name="com.ksbm_astroexpert.ui.Setting.Settings"
+93-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:69:19-54
+94            android:screenOrientation="portrait" />
+94-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:70:13-49
+95        <activity
+95-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:71:9-72:52
+96            android:name="com.ksbm_astroexpert.ui.RemidesDetails.RemidesDetails"
+96-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:71:19-67
+97            android:screenOrientation="portrait" />
+97-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:72:13-49
+98        <activity
+98-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:73:9-74:52
+99            android:name="com.ksbm_astroexpert.ui.home.Testimonials"
+99-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:73:19-55
+100            android:screenOrientation="portrait" />
+100-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:74:13-49
+101        <activity
+101-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:75:9-76:52
+102            android:name="com.ksbm_astroexpert.ui.Review.ADDRatting"
+102-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:75:19-55
+103            android:screenOrientation="portrait" />
+103-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:76:13-49
+104        <activity
+104-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:77:9-78:52
+105            android:name="com.ksbm_astroexpert.Chat.Chatactivitypro"
+105-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:77:19-55
+106            android:screenOrientation="portrait" />
+106-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:78:13-49
+107        <activity
+107-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:79:9-80:52
+108            android:name="com.ksbm_astroexpert.Support.Supportchat"
+108-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:79:19-54
+109            android:screenOrientation="portrait" />
+109-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:80:13-49
+110        <activity
+110-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:81:9-82:52
+111            android:name="com.ksbm_astroexpert.ui.home.UserProfile"
+111-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:81:19-54
+112            android:screenOrientation="portrait" />
+112-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:82:13-49
+113        <activity
+113-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:83:9-84:52
+114            android:name="com.ksbm_astroexpert.ui.home.ViewAllAstrologer"
+114-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:83:19-60
+115            android:screenOrientation="portrait" />
+115-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:84:13-49
+116        <activity
+116-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:85:9-86:52
+117            android:name="com.ksbm_astroexpert.ui.Wallet.RechargeWallet"
+117-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:85:19-59
+118            android:screenOrientation="portrait" />
+118-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:86:13-49
+119        <activity
+119-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:87:9-88:52
+120            android:name="com.ksbm_astroexpert.ui.Astrodetails.Astrologerdetails"
+120-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:87:19-68
+121            android:screenOrientation="portrait" />
+121-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:88:13-49
+122        <activity
+122-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:89:9-90:52
+123            android:name="com.ksbm_astroexpert.Astrologer.Astrologer"
+123-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:89:19-56
+124            android:screenOrientation="portrait" />
+124-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:90:13-49
+125        <activity
+125-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:91:9-98:20
+126            android:name="com.ksbm_astroexpert.ui.splash.SplashActivity"
+126-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:91:19-59
+127            android:screenOrientation="portrait" >
+127-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:92:13-49
+128            <intent-filter>
+128-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:93:13-97:29
+129                <action android:name="android.intent.action.MAIN" />
+129-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:94:17-69
+129-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:94:25-66
+130
+131                <category android:name="android.intent.category.LAUNCHER" />
+131-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:96:17-77
+131-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:96:27-74
+132            </intent-filter>
+133        </activity>
+134        <activity
+134-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:99:9-102:52
+135            android:name="com.ksbm_astroexpert.ui.signup.SignUpActivity"
+135-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:100:13-53
+136            android:exported="false"
+136-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:101:13-37
+137            android:screenOrientation="portrait" />
+137-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:102:13-49
+138        <activity
+138-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:104:9-106:51
+139            android:name="com.ksbm_astroexpert.Astrologer.CallRequest.Call_request"
+139-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:104:19-70
+140            android:exported="false"
+140-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:105:13-37
+141            android:screenOrientation="portrait" />
+141-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:106:13-49
+142        <activity
+142-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:107:9-110:52
+143            android:name="com.ksbm_astroexpert.ui.signin.SignInActivity"
+143-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:108:13-53
+144            android:exported="false"
+144-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:109:13-37
+145            android:screenOrientation="portrait" />
+145-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:110:13-49
+146        <activity
+146-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:111:9-114:52
+147            android:name="com.ksbm_astroexpert.ui.otpverification.OTPVerificationActivity"
+147-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:112:13-71
+148            android:exported="false"
+148-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:113:13-37
+149            android:screenOrientation="portrait" />
+149-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:114:13-49
+150        <activity
+150-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:115:9-118:52
+151            android:name="com.ksbm_astroexpert.ui.home.HomeActivity"
+151-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:116:13-49
+152            android:exported="false"
+152-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:117:13-37
+153            android:screenOrientation="portrait" />
+153-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:118:13-49
+154        <activity
+154-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:119:9-122:52
+155            android:name="com.ksbm_astroexpert.notification.NotificationActivity"
+155-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:120:13-62
+156            android:exported="false"
+156-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:121:13-37
+157            android:screenOrientation="portrait" />
+157-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:122:13-49
+158        <activity
+158-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:123:9-126:52
+159            android:name="com.ksbm_astroexpert.ui.about.AboutActivity"
+159-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:124:13-51
+160            android:exported="false"
+160-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:125:13-37
+161            android:screenOrientation="portrait" />
+161-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:126:13-49
+162        <activity
+162-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:127:9-130:52
+163            android:name="com.ksbm_astroexpert.ui.faqs.FAQsActivity"
+163-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:128:13-49
+164            android:exported="false"
+164-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:129:13-37
+165            android:screenOrientation="portrait" />
+165-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:130:13-49
+166        <activity
+166-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:131:9-134:52
+167            android:name="com.ksbm_astroexpert.ui.howorks.HowItWorksActivity"
+167-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:132:13-58
+168            android:exported="false"
+168-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:133:13-37
+169            android:screenOrientation="portrait" />
+169-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:134:13-49
+170        <activity
+170-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:135:9-138:52
+171            android:name="com.ksbm_astroexpert.ui.contactus.ContactUsActivity"
+171-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:136:13-59
+172            android:exported="false"
+172-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:137:13-37
+173            android:screenOrientation="portrait" />
+173-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:138:13-49
+174        <activity
+174-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:139:9-142:52
+175            android:name="com.ksbm_astroexpert.ui.privacy.PrivacyPolicyActivity"
+175-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:140:13-61
+176            android:exported="false"
+176-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:141:13-37
+177            android:screenOrientation="portrait" />
+177-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:142:13-49
+178        <activity
+178-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:143:9-146:52
+179            android:name="com.ksbm_astroexpert.ui.blog.BlogDetailActivity"
+179-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:144:13-55
+180            android:exported="false"
+180-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:145:13-37
+181            android:screenOrientation="portrait" />
+181-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:146:13-49
+182        <activity
+182-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:147:9-151:57
+183            android:name="com.ksbm_astroexpert.ui.search.SearchActivity"
+183-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:148:13-53
+184            android:exported="false"
+184-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:149:13-37
+185            android:screenOrientation="portrait"
+185-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:150:13-49
+186            android:windowSoftInputMode="stateHidden" />
+186-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:151:13-54
+187
+188        <receiver
+188-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:153:9-160:20
+189            android:name="com.ksbm_astroexpert.ui.otpverification.MySMSBroadCastReceiver"
+189-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:154:13-70
+190            android:exported="true"
+190-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:155:13-36
+191            android:permission="com.google.android.gms.auth.api.phone.permission.SEND" >
+191-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:156:13-87
+192            <intent-filter>
+192-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:157:13-159:29
+193                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+193-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:158:17-94
+193-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:158:25-91
+194            </intent-filter>
+195        </receiver>
+196
+197        <activity
+197-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:162:9-165:52
+198            android:name="com.ksbm_astroexpert.ui.agentprofile.AgentProfileActivity"
+198-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:163:13-65
+199            android:exported="false"
+199-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:164:13-37
+200            android:screenOrientation="portrait" />
+200-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:165:13-49
+201        <activity
+201-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:166:9-167:52
+202            android:name="com.ksbm_astroexpert.Chat.MainActivityChat"
+202-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:166:19-56
+203            android:screenOrientation="portrait" />
+203-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:167:13-49
+204        <activity
+204-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:168:9-175:20
+205            android:name="com.ksbm_astroexpert.Chat.activity.ProfileActivity"
+205-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:168:19-64
+206            android:screenOrientation="portrait" >
+206-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:169:13-49
+207            <intent-filter>
+207-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:170:13-174:29
+208                <action android:name="com.webdealsoft.moodsapp_PROFILE_TARGET_NOTIFICATION" />
+208-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:171:17-95
+208-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:171:25-92
+209
+210                <category android:name="android.intent.category.DEFAULT" />
+210-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:173:17-76
+210-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:173:27-73
+211            </intent-filter>
+212        </activity>
+213        <activity
+213-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:176:9-179:52
+214            android:name="com.ksbm_astroexpert.Chat.activity.UsersActivity"
+214-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:177:13-56
+215            android:parentActivityName="com.ksbm_astroexpert.Chat.MainActivityChat"
+215-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:178:13-64
+216            android:screenOrientation="portrait" />
+216-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:179:13-49
+217        <activity
+217-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:180:9-190:20
+218            android:name="com.ksbm_astroexpert.Chat.activity.ChatActivity"
+218-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:181:13-55
+219            android:parentActivityName="com.ksbm_astroexpert.Chat.MainActivityChat"
+219-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:182:13-64
+220            android:screenOrientation="portrait" >
+220-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:183:13-49
+221            <intent-filter>
+221-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:185:13-189:29
+222                <action android:name="_CHAT_TARGET_NOTIFICATION" />
+222-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:186:17-68
+222-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:186:25-65
+223
+224                <category android:name="android.intent.category.HOME" />
+224-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:187:17-73
+224-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:187:27-70
+225                <category android:name="android.intent.category.DEFAULT" />
+225-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:173:17-76
+225-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:173:27-73
+226            </intent-filter>
+227        </activity>
+228        <activity android:name="com.ksbm_astroexpert.Chat.activity.FullScreenActivity" />
+228-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:191:9-70
+228-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:191:19-67
+229        <activity
+229-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:192:9-193:52
+230            android:name="com.ksbm_astroexpert.ui.Wallet.Wallethistory"
+230-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:192:19-58
+231            android:screenOrientation="portrait" />
+231-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:193:13-49
+232        <activity android:name="com.ksbm_astroexpert.ui.home.JourneyCategory" />
+232-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:194:9-61
+232-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:194:19-58
+233        <!--
+234   <service android:name=".FCM.FCMService">
+235            <intent-filter>
+236                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+237            </intent-filter>
+238        </service>
+239        -->
+240        <activity
+240-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:202:9-208:70
+241            android:name="com.ksbm_astroexpert.notification.NotificationDialog"
+241-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:203:13-60
+242            android:configChanges="keyboardHidden|orientation|screenSize"
+242-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:204:13-74
+243            android:launchMode="singleInstance"
+243-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:205:13-48
+244            android:screenOrientation="portrait"
+244-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:207:13-49
+245            android:theme="@android:style/Theme.Dialog"
+245-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:206:13-56
+246            android:windowSoftInputMode="adjustResize|stateHidden" />
+246-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:208:13-67
+247        <activity
+247-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:209:9-215:70
+248            android:name="com.ksbm_astroexpert.notification.NotificationCallsDialog"
+248-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:210:13-65
+249            android:configChanges="keyboardHidden|orientation|screenSize"
+249-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:211:13-74
+250            android:launchMode="singleInstance"
+250-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:212:13-48
+251            android:screenOrientation="portrait"
+251-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:214:13-49
+252            android:theme="@android:style/Theme.Dialog"
+252-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:213:13-56
+253            android:windowSoftInputMode="adjustResize|stateHidden" />
+253-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:215:13-67
+254
+255        <service android:name="com.ksbm_astroexpert.notification.MyFirebaseMessagingService" >
+255-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:217:9-221:19
+255-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:217:18-73
+256            <intent-filter>
+256-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:218:13-220:29
+257                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+257-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:219:17-78
+257-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:219:25-75
+258            </intent-filter>
+259        </service>
+260
+261        <meta-data
+261-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:223:9-225:55
+262            android:name="com.razorpay.ApiKey"
+262-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:224:13-47
+263            android:value="rzp_test_s3oxLIxxZxksxM" />
+263-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:225:13-52
+264
+265        <receiver android:name="com.razorpay.RzpTokenReceiver" >
+265-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:12:9-16:20
+265-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:12:19-63
+266            <intent-filter>
+266-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:13:13-15:29
+267                <action android:name="rzp.device_token.share" />
+267-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:14:17-65
+267-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:14:25-62
+268            </intent-filter>
+269        </receiver>
+270
+271        <activity
+271-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:18:9-29:20
+272            android:name="com.razorpay.CheckoutActivity"
+272-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:19:13-57
+273            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+273-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:20:13-83
+274            android:theme="@style/CheckoutTheme" >
+274-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:21:13-49
+275            <intent-filter>
+275-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:22:13-28:29
+276                <action android:name="android.intent.action.MAIN" />
+276-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:94:17-69
+276-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:94:25-66
+277
+278                <data
+278-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:25:17-27:47
+279                    android:host="rzp.io"
+279-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:26:21-42
+280                    android:scheme="io.rzp" />
+280-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:27:21-44
+281            </intent-filter>
+282        </activity>
+283        <activity
+283-->[com.payumoney.sdkui:plug-n-play:1.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\9c99145eac313e6e98fe2e7a5f099c58\jetified-plug-n-play-1.6.0\AndroidManifest.xml:19:9-24:55
+284            android:name="com.payumoney.sdkui.ui.activities.PayUmoneyActivity"
+284-->[com.payumoney.sdkui:plug-n-play:1.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\9c99145eac313e6e98fe2e7a5f099c58\jetified-plug-n-play-1.6.0\AndroidManifest.xml:20:13-79
+285            android:label="@string/title_activity_citrus"
+285-->[com.payumoney.sdkui:plug-n-play:1.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\9c99145eac313e6e98fe2e7a5f099c58\jetified-plug-n-play-1.6.0\AndroidManifest.xml:21:13-58
+286            android:screenOrientation="portrait"
+286-->[com.payumoney.sdkui:plug-n-play:1.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\9c99145eac313e6e98fe2e7a5f099c58\jetified-plug-n-play-1.6.0\AndroidManifest.xml:22:13-49
+287            android:theme="@style/PayumoneyAppTheme"
+287-->[com.payumoney.sdkui:plug-n-play:1.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\9c99145eac313e6e98fe2e7a5f099c58\jetified-plug-n-play-1.6.0\AndroidManifest.xml:23:13-53
+288            android:windowSoftInputMode="adjustPan" />
+288-->[com.payumoney.sdkui:plug-n-play:1.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\9c99145eac313e6e98fe2e7a5f099c58\jetified-plug-n-play-1.6.0\AndroidManifest.xml:24:13-52
+289        <activity
+289-->[com.payumoney.sdkui:plug-n-play:1.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\9c99145eac313e6e98fe2e7a5f099c58\jetified-plug-n-play-1.6.0\AndroidManifest.xml:25:9-28:56
+290            android:name="com.payumoney.sdkui.ui.activities.ReviewOrderActivity"
+290-->[com.payumoney.sdkui:plug-n-play:1.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\9c99145eac313e6e98fe2e7a5f099c58\jetified-plug-n-play-1.6.0\AndroidManifest.xml:26:13-81
+291            android:screenOrientation="portrait"
+291-->[com.payumoney.sdkui:plug-n-play:1.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\9c99145eac313e6e98fe2e7a5f099c58\jetified-plug-n-play-1.6.0\AndroidManifest.xml:27:13-49
+292            android:theme="@style/PayumoneyAppTheme" />
+292-->[com.payumoney.sdkui:plug-n-play:1.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\9c99145eac313e6e98fe2e7a5f099c58\jetified-plug-n-play-1.6.0\AndroidManifest.xml:28:13-53
+293        <activity
+293-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:31:9-34:72
+294            android:name="com.payumoney.core.SdkWebViewActivityNew"
+294-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:32:13-68
+295            android:screenOrientation="portrait"
+295-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:33:13-49
+296            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+296-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:34:13-69
+297        <activity
+297-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:35:9-40:59
+298            android:name="com.payu.custombrowser.CBActivity"
+298-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:36:13-61
+299            android:screenOrientation="portrait"
+299-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:37:13-49
+300            android:theme="@style/Theme.AppCompat"
+300-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:38:13-51
+301            android:windowSoftInputMode="stateAlwaysHidden" />
+301-->[com.payumoney.core:payumoney-sdk:7.6.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ee8666203f825cdbce0ce04dff279dd0\jetified-payumoney-sdk-7.6.0\AndroidManifest.xml:39:13-60
+302
+303        <service android:name="com.payu.custombrowser.services.SnoozeService" />
+303-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:23:9-81
+303-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:23:18-78
+304
+305        <activity android:name="com.payu.custombrowser.PreLollipopPaymentsActivity" >
+305-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:25:9-42:20
+305-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:25:19-84
+306            <intent-filter>
+306-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:26:13-33:29
+307                <data android:scheme="com.ksbm_astroexpert.success" />
+307-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:25:17-27:47
+307-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:27:21-44
+308
+309                <action android:name="android.intent.action.VIEW" />
+309-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:29:17-69
+309-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:29:25-66
+310
+311                <category android:name="android.intent.category.DEFAULT" />
+311-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:173:17-76
+311-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:173:27-73
+312                <category android:name="android.intent.category.BROWSABLE" />
+312-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:32:17-78
+312-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:32:27-75
+313            </intent-filter>
+314            <intent-filter>
+314-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:34:13-41:29
+315                <data android:scheme="com.ksbm_astroexpert.failure" />
+315-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:25:17-27:47
+315-->[com.razorpay:checkout:1.5.16] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\ddaee7d5f11e447787994c5dd09154f0\jetified-checkout-1.5.16\AndroidManifest.xml:27:21-44
+316
+317                <action android:name="android.intent.action.VIEW" />
+317-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:29:17-69
+317-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:29:25-66
+318
+319                <category android:name="android.intent.category.DEFAULT" />
+319-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:173:17-76
+319-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:173:27-73
+320                <category android:name="android.intent.category.BROWSABLE" />
+320-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:32:17-78
+320-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:32:27-75
+321            </intent-filter>
+322        </activity>
+323        <activity android:name="com.payu.custombrowser.PrePaymentsActivity" />
+323-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:43:9-79
+323-->[com.payu.custombrowser:payu-custom-browser:7.5.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\931f9000ea36f1028a002ae26f230075\jetified-payu-custom-browser-7.5.1\AndroidManifest.xml:43:19-76
+324        <activity
+324-->[com.payu.upisdk:upisdk:1.0.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\2b4ee0e8db4b0c18785d27a61f37c3c1\jetified-upisdk-1.0.2\AndroidManifest.xml:14:9-17:63
+325            android:name="com.payu.upisdk.upiintent.PaymentResponseUpiSdkActivity"
+325-->[com.payu.upisdk:upisdk:1.0.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\2b4ee0e8db4b0c18785d27a61f37c3c1\jetified-upisdk-1.0.2\AndroidManifest.xml:15:13-83
+326            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar"
+326-->[com.payu.upisdk:upisdk:1.0.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\2b4ee0e8db4b0c18785d27a61f37c3c1\jetified-upisdk-1.0.2\AndroidManifest.xml:16:13-75
+327            android:windowSoftInputMode="stateAlwaysHidden" />
+327-->[com.payu.upisdk:upisdk:1.0.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\2b4ee0e8db4b0c18785d27a61f37c3c1\jetified-upisdk-1.0.2\AndroidManifest.xml:17:13-60
+328
+329        <provider
+329-->[com.squareup.picasso:picasso:2.71828] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\13358bd019060c5db3afd0c73256e612\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+330            android:name="com.squareup.picasso.PicassoProvider"
+330-->[com.squareup.picasso:picasso:2.71828] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\13358bd019060c5db3afd0c73256e612\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+331            android:authorities="com.ksbm_astroexpert.com.squareup.picasso"
+331-->[com.squareup.picasso:picasso:2.71828] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\13358bd019060c5db3afd0c73256e612\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+332            android:exported="false" />
+332-->[com.squareup.picasso:picasso:2.71828] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\13358bd019060c5db3afd0c73256e612\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+333
+334        <activity
+334-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\3406059a8200b7d12c69b1c199ca1b59\jetified-play-services-auth-18.1.0\AndroidManifest.xml:23:9-27:75
+335            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+335-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\3406059a8200b7d12c69b1c199ca1b59\jetified-play-services-auth-18.1.0\AndroidManifest.xml:24:13-93
+336            android:excludeFromRecents="true"
+336-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\3406059a8200b7d12c69b1c199ca1b59\jetified-play-services-auth-18.1.0\AndroidManifest.xml:25:13-46
+337            android:exported="false"
+337-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\3406059a8200b7d12c69b1c199ca1b59\jetified-play-services-auth-18.1.0\AndroidManifest.xml:26:13-37
+338            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+338-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\3406059a8200b7d12c69b1c199ca1b59\jetified-play-services-auth-18.1.0\AndroidManifest.xml:27:13-72
+339        <!--
+340            Service handling Google Sign-In user revocation. For apps that do not integrate with
+341            Google Sign-In, this service will never be started.
+342        -->
+343        <service
+343-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\3406059a8200b7d12c69b1c199ca1b59\jetified-play-services-auth-18.1.0\AndroidManifest.xml:33:9-37:51
+344            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+344-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\3406059a8200b7d12c69b1c199ca1b59\jetified-play-services-auth-18.1.0\AndroidManifest.xml:34:13-89
+345            android:exported="true"
+345-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\3406059a8200b7d12c69b1c199ca1b59\jetified-play-services-auth-18.1.0\AndroidManifest.xml:35:13-36
+346            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+346-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\3406059a8200b7d12c69b1c199ca1b59\jetified-play-services-auth-18.1.0\AndroidManifest.xml:36:13-107
+347            android:visibleToInstantApps="true" />
+347-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\3406059a8200b7d12c69b1c199ca1b59\jetified-play-services-auth-18.1.0\AndroidManifest.xml:37:13-48
+348        <service
+348-->[com.google.firebase:firebase-crashlytics:17.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\69e3a3b32097fc1aa4c2f02aed222a5f\jetified-firebase-crashlytics-17.1.0\AndroidManifest.xml:13:9-19:19
+349            android:name="com.google.firebase.components.ComponentDiscoveryService"
+349-->[com.google.firebase:firebase-crashlytics:17.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\69e3a3b32097fc1aa4c2f02aed222a5f\jetified-firebase-crashlytics-17.1.0\AndroidManifest.xml:14:13-84
+350            android:directBootAware="true"
+350-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\624abcec425ff2c0efceb3d46ae4f4b5\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+351            android:exported="false" >
+351-->[com.google.firebase:firebase-crashlytics:17.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\69e3a3b32097fc1aa4c2f02aed222a5f\jetified-firebase-crashlytics-17.1.0\AndroidManifest.xml:15:13-37
+352            <meta-data
+352-->[com.google.firebase:firebase-crashlytics:17.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\69e3a3b32097fc1aa4c2f02aed222a5f\jetified-firebase-crashlytics-17.1.0\AndroidManifest.xml:16:13-18:85
+353                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+353-->[com.google.firebase:firebase-crashlytics:17.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\69e3a3b32097fc1aa4c2f02aed222a5f\jetified-firebase-crashlytics-17.1.0\AndroidManifest.xml:17:17-115
+354                android:value="com.google.firebase.components.ComponentRegistrar" />
+354-->[com.google.firebase:firebase-crashlytics:17.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\69e3a3b32097fc1aa4c2f02aed222a5f\jetified-firebase-crashlytics-17.1.0\AndroidManifest.xml:18:17-82
+355            <meta-data
+355-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\f650ff85f46d15892bbdaed7bcb07e51\jetified-firebase-messaging-20.2.3\AndroidManifest.xml:39:13-41:85
+356                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+356-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\f650ff85f46d15892bbdaed7bcb07e51\jetified-firebase-messaging-20.2.3\AndroidManifest.xml:40:17-119
+357                android:value="com.google.firebase.components.ComponentRegistrar" />
+357-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\f650ff85f46d15892bbdaed7bcb07e51\jetified-firebase-messaging-20.2.3\AndroidManifest.xml:41:17-82
+358            <meta-data
+358-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\1b78c7a4d12f3de94c12b081153073bb\jetified-firebase-storage-19.1.1\AndroidManifest.xml:33:13-35:85
+359                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+359-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\1b78c7a4d12f3de94c12b081153073bb\jetified-firebase-storage-19.1.1\AndroidManifest.xml:34:17-107
+360                android:value="com.google.firebase.components.ComponentRegistrar" />
+360-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\1b78c7a4d12f3de94c12b081153073bb\jetified-firebase-storage-19.1.1\AndroidManifest.xml:35:17-82
+361            <meta-data
+361-->[com.google.firebase:firebase-auth:19.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\566a35a76567d0ad900b579f181cdcfd\jetified-firebase-auth-19.3.2\AndroidManifest.xml:36:13-38:85
+362                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+362-->[com.google.firebase:firebase-auth:19.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\566a35a76567d0ad900b579f181cdcfd\jetified-firebase-auth-19.3.2\AndroidManifest.xml:37:17-109
+363                android:value="com.google.firebase.components.ComponentRegistrar" />
+363-->[com.google.firebase:firebase-auth:19.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\566a35a76567d0ad900b579f181cdcfd\jetified-firebase-auth-19.3.2\AndroidManifest.xml:38:17-82
+364            <meta-data
+364-->[com.google.firebase:firebase-database:19.3.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\aa0b907c75ca36933998dbf873fd9dc5\jetified-firebase-database-19.3.1\AndroidManifest.xml:32:13-34:85
+365                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+365-->[com.google.firebase:firebase-database:19.3.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\aa0b907c75ca36933998dbf873fd9dc5\jetified-firebase-database-19.3.1\AndroidManifest.xml:33:17-109
+366                android:value="com.google.firebase.components.ComponentRegistrar" />
+366-->[com.google.firebase:firebase-database:19.3.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\aa0b907c75ca36933998dbf873fd9dc5\jetified-firebase-database-19.3.1\AndroidManifest.xml:34:17-82
+367            <meta-data
+367-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:32:13-34:85
+368                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+368-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:33:17-96
+369                android:value="com.google.firebase.components.ComponentRegistrar" />
+369-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:34:17-82
+370            <meta-data
+370-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\00989393f44026b22155b6149e1b1b04\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+371                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+371-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\00989393f44026b22155b6149e1b1b04\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+372                android:value="com.google.firebase.components.ComponentRegistrar" />
+372-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\00989393f44026b22155b6149e1b1b04\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+373            <meta-data
+373-->[com.google.android.gms:play-services-measurement-api:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\766ef5dab22e9b491f3d49715a018248\jetified-play-services-measurement-api-17.4.4\AndroidManifest.xml:30:13-32:85
+374                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+374-->[com.google.android.gms:play-services-measurement-api:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\766ef5dab22e9b491f3d49715a018248\jetified-play-services-measurement-api-17.4.4\AndroidManifest.xml:31:17-139
+375                android:value="com.google.firebase.components.ComponentRegistrar" />
+375-->[com.google.android.gms:play-services-measurement-api:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\766ef5dab22e9b491f3d49715a018248\jetified-play-services-measurement-api-17.4.4\AndroidManifest.xml:32:17-82
+376            <meta-data
+376-->[com.google.firebase:firebase-installations:16.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\dd0487d3454c4ab7e9e3ddbb28d4a939\jetified-firebase-installations-16.3.2\AndroidManifest.xml:17:13-19:85
+377                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+377-->[com.google.firebase:firebase-installations:16.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\dd0487d3454c4ab7e9e3ddbb28d4a939\jetified-firebase-installations-16.3.2\AndroidManifest.xml:18:17-127
+378                android:value="com.google.firebase.components.ComponentRegistrar" />
+378-->[com.google.firebase:firebase-installations:16.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\dd0487d3454c4ab7e9e3ddbb28d4a939\jetified-firebase-installations-16.3.2\AndroidManifest.xml:19:17-82
+379        </service>
+380        <!--
+381             FirebaseMessagingService performs security checks at runtime,
+382             but set to not exported to explicitly avoid allowing another app to call it.
+383        -->
+384        <service
+384-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\f650ff85f46d15892bbdaed7bcb07e51\jetified-firebase-messaging-20.2.3\AndroidManifest.xml:28:9-35:19
+385            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+385-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\f650ff85f46d15892bbdaed7bcb07e51\jetified-firebase-messaging-20.2.3\AndroidManifest.xml:29:13-82
+386            android:directBootAware="true"
+386-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\f650ff85f46d15892bbdaed7bcb07e51\jetified-firebase-messaging-20.2.3\AndroidManifest.xml:30:13-43
+387            android:exported="false" >
+387-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\f650ff85f46d15892bbdaed7bcb07e51\jetified-firebase-messaging-20.2.3\AndroidManifest.xml:31:13-37
+388            <intent-filter android:priority="-500" >
+388-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:218:13-220:29
+389                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+389-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:219:17-78
+389-->E:\New folder\astro_experts\app\src\main\AndroidManifest.xml:219:25-75
+390            </intent-filter>
+391        </service>
+392
+393        <activity
+393-->[com.google.firebase:firebase-auth:19.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\566a35a76567d0ad900b579f181cdcfd\jetified-firebase-auth-19.3.2\AndroidManifest.xml:24:9-31:50
+394            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+394-->[com.google.firebase:firebase-auth:19.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\566a35a76567d0ad900b579f181cdcfd\jetified-firebase-auth-19.3.2\AndroidManifest.xml:25:13-85
+395            android:excludeFromRecents="true"
+395-->[com.google.firebase:firebase-auth:19.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\566a35a76567d0ad900b579f181cdcfd\jetified-firebase-auth-19.3.2\AndroidManifest.xml:26:13-46
+396            android:exported="true"
+396-->[com.google.firebase:firebase-auth:19.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\566a35a76567d0ad900b579f181cdcfd\jetified-firebase-auth-19.3.2\AndroidManifest.xml:27:13-36
+397            android:launchMode="singleTask"
+397-->[com.google.firebase:firebase-auth:19.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\566a35a76567d0ad900b579f181cdcfd\jetified-firebase-auth-19.3.2\AndroidManifest.xml:28:13-44
+398            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+398-->[com.google.firebase:firebase-auth:19.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\566a35a76567d0ad900b579f181cdcfd\jetified-firebase-auth-19.3.2\AndroidManifest.xml:29:13-102
+399            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+399-->[com.google.firebase:firebase-auth:19.3.2] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\566a35a76567d0ad900b579f181cdcfd\jetified-firebase-auth-19.3.2\AndroidManifest.xml:30:13-72
+400
+401        <receiver
+401-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:37:9-44:20
+402            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+402-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:38:13-78
+403            android:exported="true"
+403-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:39:13-36
+404            android:permission="com.google.android.c2dm.permission.SEND" >
+404-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:40:13-73
+405            <intent-filter>
+405-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:41:13-43:29
+406                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+406-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:42:17-81
+406-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\8bf5da1f912f455ed0bd6a9f55345d6f\jetified-firebase-iid-20.2.3\AndroidManifest.xml:42:25-78
+407            </intent-filter>
+408        </receiver>
+409
+410        <activity
+410-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\7ee18c5c1ea256103aea52538bd61d0a\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+411            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+411-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\7ee18c5c1ea256103aea52538bd61d0a\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+412            android:exported="false"
+412-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\7ee18c5c1ea256103aea52538bd61d0a\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+413            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+413-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\7ee18c5c1ea256103aea52538bd61d0a\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+414
+415        <provider
+415-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\624abcec425ff2c0efceb3d46ae4f4b5\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+416            android:name="com.google.firebase.provider.FirebaseInitProvider"
+416-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\624abcec425ff2c0efceb3d46ae4f4b5\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+417            android:authorities="com.ksbm_astroexpert.firebaseinitprovider"
+417-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\624abcec425ff2c0efceb3d46ae4f4b5\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+418            android:exported="false"
+418-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\624abcec425ff2c0efceb3d46ae4f4b5\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+419            android:initOrder="100" />
+419-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\624abcec425ff2c0efceb3d46ae4f4b5\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+420
+421        <receiver
+421-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:29:9-33:20
+422            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+422-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:30:13-85
+423            android:enabled="true"
+423-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:31:13-35
+424            android:exported="false" >
+424-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:32:13-37
+425        </receiver>
+426
+427        <service
+427-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:35:9-38:40
+428            android:name="com.google.android.gms.measurement.AppMeasurementService"
+428-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:36:13-84
+429            android:enabled="true"
+429-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:37:13-35
+430            android:exported="false" />
+430-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:38:13-37
+431        <service
+431-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:39:9-43:72
+432            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+432-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:40:13-87
+433            android:enabled="true"
+433-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:41:13-35
+434            android:exported="false"
+434-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:42:13-37
+435            android:permission="android.permission.BIND_JOB_SERVICE" />
+435-->[com.google.android.gms:play-services-measurement:17.4.4] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\22ae5a74c21618cee75c34023d7209cd\jetified-play-services-measurement-17.4.4\AndroidManifest.xml:43:13-69
+436
+437        <meta-data
+437-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\10cd124f7a0d5b9750c26d772993c7c8\jetified-play-services-basement-17.1.1\AndroidManifest.xml:23:9-25:69
+438            android:name="com.google.android.gms.version"
+438-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\10cd124f7a0d5b9750c26d772993c7c8\jetified-play-services-basement-17.1.1\AndroidManifest.xml:24:13-58
+439            android:value="@integer/google_play_services_version" />
+439-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\10cd124f7a0d5b9750c26d772993c7c8\jetified-play-services-basement-17.1.1\AndroidManifest.xml:25:13-66
+440
+441        <service
+441-->[com.google.android.datatransport:transport-backend-cct:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\0b06ea4568a88c0cc0ee75bd8c9ba677\jetified-transport-backend-cct-2.2.3\AndroidManifest.xml:29:9-35:19
+442            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+442-->[com.google.android.datatransport:transport-backend-cct:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\0b06ea4568a88c0cc0ee75bd8c9ba677\jetified-transport-backend-cct-2.2.3\AndroidManifest.xml:30:13-103
+443            android:exported="false" >
+443-->[com.google.android.datatransport:transport-backend-cct:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\0b06ea4568a88c0cc0ee75bd8c9ba677\jetified-transport-backend-cct-2.2.3\AndroidManifest.xml:31:13-37
+444            <meta-data
+444-->[com.google.android.datatransport:transport-backend-cct:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\0b06ea4568a88c0cc0ee75bd8c9ba677\jetified-transport-backend-cct-2.2.3\AndroidManifest.xml:32:13-34:39
+445                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+445-->[com.google.android.datatransport:transport-backend-cct:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\0b06ea4568a88c0cc0ee75bd8c9ba677\jetified-transport-backend-cct-2.2.3\AndroidManifest.xml:33:17-94
+446                android:value="cct" />
+446-->[com.google.android.datatransport:transport-backend-cct:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\0b06ea4568a88c0cc0ee75bd8c9ba677\jetified-transport-backend-cct-2.2.3\AndroidManifest.xml:34:17-36
+447        </service>
+448        <service
+448-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\95a133d30f694e55a6011ca8c0b470f1\jetified-transport-runtime-2.2.3\AndroidManifest.xml:26:9-30:19
+449            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+449-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\95a133d30f694e55a6011ca8c0b470f1\jetified-transport-runtime-2.2.3\AndroidManifest.xml:27:13-117
+450            android:exported="false"
+450-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\95a133d30f694e55a6011ca8c0b470f1\jetified-transport-runtime-2.2.3\AndroidManifest.xml:28:13-37
+451            android:permission="android.permission.BIND_JOB_SERVICE" >
+451-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\95a133d30f694e55a6011ca8c0b470f1\jetified-transport-runtime-2.2.3\AndroidManifest.xml:29:13-69
+452        </service>
+453
+454        <receiver
+454-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\95a133d30f694e55a6011ca8c0b470f1\jetified-transport-runtime-2.2.3\AndroidManifest.xml:32:9-34:40
+455            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+455-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\95a133d30f694e55a6011ca8c0b470f1\jetified-transport-runtime-2.2.3\AndroidManifest.xml:33:13-132
+456            android:exported="false" />
+456-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\DEV\.gradle\caches\transforms-2\files-2.1\95a133d30f694e55a6011ca8c0b470f1\jetified-transport-runtime-2.2.3\AndroidManifest.xml:34:13-37
+457    </application>
+458
+459</manifest>

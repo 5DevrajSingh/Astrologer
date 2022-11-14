@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "923313157838",
+    "firebase_url": "https://astroguru-65602.firebaseio.com",
+    "project_id": "astroguru-65602",
+    "storage_bucket": "astroguru-65602.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923313157838:android:1afd121be3938a77bf029f",
+        "android_client_info": {
+          "package_name": "com.ksbm_astroexpert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923313157838-k6j4vski3cj457m2crs6d1ihhm94pu1i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCai3uZohKCCi9ry0dzSGjJeVfMvdNBleg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "923313157838-k6j4vski3cj457m2crs6d1ihhm94pu1i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                               
+   <RelativeLayout
+       android:id="@+id/main_content"
+       android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" android:tag="layout/activity_sliding_astro_details_l_ist_0" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme"
+            android:id="@+id/appbar">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_weight="1"
+                        app:contentInsetLeft="0dp"
+                        app:contentInsetStart="0dp"
+                        android:theme="@style/AppTheme"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/d_bottom_gray_line">
+
+                            <ImageButton
+                                android:layout_width="50dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_arrow_back"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:scaleType="fitStart"
+                                android:id="@+id/back_btn"
+                                android:visibility="visible"
+                                android:tint="@color/black"
+                                android:background="@color/transparent"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Astrologer List"
+                                android:textSize="@dimen/dimen_16dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/back_btn"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="?attr/actionBarSize"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_alignParentRight="true"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/llwallet"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    >
+
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        xmlns:android="http://schemas.android.com/apk/res/android"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:background="@drawable/wallet_view_bg"
+                                        >
+
+                                        <com.ksbm_astroexpert.view.BoldTextView
+                                            android:id="@+id/txtBalance"
+                                            android:textColor="@color/white"
+                                            android:layout_width="wrap_content"
+                                            android:drawablePadding="3dp"
+                                            android:gravity="center"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:layout_height="wrap_content"
+                                            android:drawableStart="@drawable/ic_account_balance_wallet"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:text="₹ 0" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                                </LinearLayout>
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/imgSupport"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:onClick="mem"
+                                    app:srcCompat="@drawable/support" />
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.Toolbar>
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appbar"
+            android:layout_above="@+id/lybutton"
+            android:id="@+id/recyclerview">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/lybutton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:weightSum="2"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/callbtn"
+            android:background="@color/green"
+            android:layout_marginRight="0.5dp">
+
+
+            <LinearLayout
+                android:id="@+id/callme1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_call"
+                    android:tint="@color/white"
+                    android:visibility="gone"
+                    android:id="@+id/callmed"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:minWidth="100dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:textSize="14sp"
+                    android:paddingBottom="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/ic_call"
+                    android:typeface="serif"
+                    android:textStyle="normal"
+                    android:layout_centerInParent="true"
+                    android:textAllCaps="false"
+                    android:text="Call"
+                    android:id="@+id/callme"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_below="@+id/callme1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/callprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:drawableTint="@color/white"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:textSize="14dp"
+                    android:text="₹--/min"
+                    android:textAllCaps="false"
+                    android:typeface="serif"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/permin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:drawableTint="@color/white"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="5dp"
+                    android:text="/min"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/chatbtn"
+            android:background="@color/green"
+            android:layout_marginLeft="0.5dp">
+
+            <LinearLayout
+                android:id="@+id/chatme1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/chat"
+                    android:tint="@color/white"
+                    android:id="@+id/chatmed"
+                    android:layout_marginLeft="30dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="110dp"
+                    android:layout_margin="2dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:textSize="16dp"
+                    android:paddingBottom="1dp"
+                    android:typeface="serif"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:textStyle="normal"
+                    android:layout_centerInParent="true"
+                    android:textAllCaps="false"
+                    android:text="Chat"
+                    android:id="@+id/chatme"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_below="@+id/chatme1"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/chatprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:drawableTint="@color/green"
+                    android:gravity="center"
+                    android:text="₹--/min"
+                    android:textAllCaps="false"
+                    android:typeface="serif"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+                <TextView
+                    android:id="@+id/perminchat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableTint="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:text="/min"
+                    android:visibility="gone"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+         

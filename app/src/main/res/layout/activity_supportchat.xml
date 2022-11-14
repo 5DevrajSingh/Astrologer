@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:id="@+id/chat_root"
+    android:focusableInTouchMode="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/primary"
+        android:padding="5dp"
+        android:id="@+id/toolbar">
+
+        <ImageView
+
+            android:id="@+id/back"
+            android:onClick="backdd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/backarrow"
+            android:backgroundTint="@color/black"
+            android:layout_centerVertical="true"
+            />
+
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Astro Expert"
+            android:layout_toRightOf="@+id/chat_user_pic"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:textSize="21sp"
+            android:layout_marginLeft="50dp" />
+
+
+        <ImageView
+            android:id="@+id/ivCall"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:src="@drawable/phone"
+            android:tint="@color/white"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            />
+
+
+        <ImageView
+            android:id="@+id/ivVideo"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:tint="@color/white"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/ivCall"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bgok"
+        android:alpha="0.3"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recycler"
+        android:layout_above="@+id/chat_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/chat_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#f5f5f5"
+        android:elevation="10dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/chat_send_picture"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/galery"/>
+
+        <EditText
+            android:id="@+id/chat_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:hint="  Type here..."
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@+id/chat_send"
+            android:layout_toEndOf="@id/chat_send_picture"
+            android:background="@drawable/chateditboc"
+            android:padding="5dp"/>
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:id="@+id/chat_send"
+            app:srcCompat="@drawable/forwardarrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/white"
+            app:backgroundTint="@color/colorAccent"
+            app:fabSize="auto" />
+    </RelativeLayout>
+</RelativeLayout>

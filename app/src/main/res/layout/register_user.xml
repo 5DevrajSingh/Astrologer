@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/colorPrimary"
+        tools:context=".ui.splash.SplashActivity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Skip"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:id="@+id/skip"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="4dp"
+            android:id="@+id/textsign"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/textsign1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create your account"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:layout_below="@+id/textsign"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+           android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+             android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="4dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".1"
+                android:src="@drawable/astro"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter first name"
+                        android:layout_marginTop="8dp"
+                        android:textSize="14dp"
+                        android:id="@+id/name"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="2dp"
+                        android:textColorHint="@color/gray"
+                        />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter last name"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14dp"
+                    android:id="@+id/lastname"
+                    android:drawableLeft="@drawable/ic_baseline_person_24"
+                    android:drawablePadding="2dp"
+                    android:textColorHint="@color/gray"
+                    />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Enter email"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:drawableLeft="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="2dp"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter mobile number"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:id="@+id/mobile"
+                    android:drawableLeft="@drawable/ic_baseline_call_24"
+                    android:drawablePadding="2dp"
+                    android:textColorHint="@color/gray"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="date of birth(YYY-MM-DD)"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:id="@+id/dob"
+                    android:padding="8dp"
+                    android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+                    android:drawablePadding="4dp"
+                    android:textColorHint="@color/gray"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Time of birth(HH:SS)"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:padding="8dp"
+                    android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                    android:drawablePadding="4dp"
+                    android:id="@+id/timeofbith"
+                    android:textColorHint="@color/gray"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Place of birth"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:id="@+id/placeofbirth"
+                    android:drawableLeft="@drawable/ic_baseline_place_24"
+                    android:drawablePadding="2dp"
+                    android:textColorHint="@color/gray"
+                    />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radiogroup"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:id="@+id/male"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:drawableLeft="@drawable/woman"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/female"/>
+                </RadioGroup>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Referral Code"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    android:textColorHint="@color/gray"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/login_btn_bg"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/register"
+                    android:textColor="@color/black"
+                    android:text="Sign UP"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

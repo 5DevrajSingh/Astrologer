@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"/>
+</com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:layout_below="@+id/appbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="Shared this Journey"
+                android:gravity="start"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimen_15dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text=""
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:id="@+id/journeyname"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_15dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text=""
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:id="@+id/name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text=""
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:id="@+id/email"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_15dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/light_gray"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:hint="Enter chat journey here..."
+                android:gravity="start"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
+                android:layout_gravity="start"
+                android:id="@+id/desc"
+                android:background="@null"
+                android:textSize="@dimen/dimen_15dp" />
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Share Now"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/share"
+            android:orientation="vertical">
+
+
+        </Button>
+    </RelativeLayout>
+</RelativeLayout>
+
+</layout>

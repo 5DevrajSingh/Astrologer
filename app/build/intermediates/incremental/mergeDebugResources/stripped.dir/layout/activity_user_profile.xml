@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:elevation="4dp"
+                android:layout_marginTop="@dimen/dimen_50dp"
+                android:id="@+id/linearLayout">
+
+                <RelativeLayout
+                    android:id="@+id/rlupload"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/splash"
+                        android:layout_weight="0.5"
+                        android:elevation="5dp"
+                        android:padding="5dp"
+                        android:id="@+id/ivProfile"
+                        android:layout_gravity="center"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/white"
+                        />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/add"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rohit Sharma"
+                    android:textSize="20dp"
+                    android:id="@+id/name"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:id="@+id/trialdays"
+                    android:visibility="gone"
+                    android:text="You are Trail user "
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="53dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_height="40dp"
+                        android:layout_width="wrap_content"
+                        android:text="Account Info"
+                        android:textSize="@dimen/dp25"
+                        android:textColor="@color/black"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="0.8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/red"
+                        android:layout_marginBottom="20dp">
+
+                    </View>
+
+
+                    <EditText
+                        android:id="@+id/editname"
+                        style="@style/MyEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="25dp"
+                        android:elevation="5dp"
+                        android:background="@drawable/edittext_background"
+                        android:hint="Enter your Name"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/mobile"
+                        style="@style/MyEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_background"
+                        android:layout_marginBottom="25dp"
+                        android:elevation="5dp"
+                        android:hint="Enter your Mobile no."
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/editusername"
+                        style="@style/MyEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_background"
+                        android:layout_marginBottom="25dp"
+                        android:elevation="5dp"
+                        android:visibility="gone"
+                        android:hint="Enter your user name"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+                    <EditText
+                        android:id="@+id/editemail"
+                        style="@style/MyEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="25dp"
+                        android:elevation="5dp"
+                        android:background="@drawable/edittext_background"
+                        android:hint="Enter your email Address"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:textStyle="bold"
+                        android:background="@color/primary"
+                        android:shadowColor="@color/black"
+                        android:paddingLeft="48dp"
+                        android:paddingRight="48dp"
+                        android:layout_marginBottom="74dp"
+                        android:text="Update Profile"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

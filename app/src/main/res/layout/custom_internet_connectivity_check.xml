@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:background="@color/white">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:gravity="start"
+        android:padding="5dp"
+        android:text="Astro Experts alert"
+        android:background="@color/primary"
+        android:textColor="@color/white"
+        android:textStyle="bold">
+
+    </TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:text="You are offline. No data connection found. Please check internet connection and try again."
+        android:textColor="@color/black">
+
+    </TextView>
+
+
+
+    <TextView
+        android:id="@+id/try_again"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Try Again"
+        android:background="@color/primary"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black">
+
+    </TextView>
+
+
+</LinearLayout>

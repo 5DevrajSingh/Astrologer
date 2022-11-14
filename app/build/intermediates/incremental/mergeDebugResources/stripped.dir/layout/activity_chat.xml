@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:padding="5dp"
+        android:id="@+id/toolbar">
+
+        <ImageView
+
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/backarrow"
+            android:backgroundTint="@color/black"
+            android:layout_centerVertical="true"
+            android:onClick="backd"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chat_user_pic"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/splash"
+            android:layout_centerVertical="true"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/black"
+            android:layout_toRightOf="@+id/back"
+
+            />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UserName"
+            android:layout_toRightOf="@+id/chat_user_pic"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:textSize="21sp"
+            android:layout_marginLeft="10dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/chat_user_pic"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AstroExperts"
+            android:id="@+id/astr"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/dimen_15dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:onClick="endchat"
+                android:id="@+id/timmer"
+                android:textSize="@dimen/dimen_12dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivCall"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:src="@drawable/phone"
+            android:tint="@color/white"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            />
+
+
+        <ImageView
+            android:id="@+id/ivVideo"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:tint="@color/white"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/ivCall"
+            android:visibility="gone"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/offlineme"
+            android:onClick="endchat"
+            android:layout_centerInParent="true"
+            android:id="@+id/endchat"
+            android:textColor="@color/red"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:padding="@dimen/dimen_10dp"
+            android:text="End Chat"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:id="@+id/chat_root"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bgok"
+            android:scaleType="fitXY"
+            android:alpha="0.3"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recycler"
+        android:layout_above="@+id/chat_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFFBEB"
+            android:weightSum="2"
+            android:visibility="gone"
+            android:id="@+id/recharebox">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Balance is less than 5 min\n Quick Recharge"
+                android:layout_margin="@dimen/dimen_10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/edit_box"
+                    android:layout_margin="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+200.0"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:paddingTop="@dimen/dimen_5dp"
+                        android:paddingBottom="@dimen/dimen_5dp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/edit_box"
+                    android:layout_margin="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+500.0"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:paddingTop="@dimen/dimen_5dp"
+                        android:paddingBottom="@dimen/dimen_5dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/chat_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#FFFBEB"
+        android:elevation="10dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/chat_send_picture"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/galery"/>
+
+        <EditText
+            android:id="@+id/chat_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:hint="  Type here..."
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@+id/chat_send"
+            android:layout_toEndOf="@id/chat_send_picture"
+            android:background="@drawable/chateditboc"
+            android:padding="5dp"/>
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:id="@+id/chat_send"
+            app:srcCompat="@drawable/forwardarrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/white"
+            app:backgroundTint="@color/primary"
+            app:fabSize="auto" />
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/chatFeedback"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/multi_color_light_theme"
+            android:layout_marginTop="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/splash"
+                    android:layout_weight="0.5"
+                    android:elevation="5dp"
+                    android:padding="5dp"
+                    android:id="@+id/ivProfile"
+                    android:layout_gravity="center"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rohit Sharma"
+                    android:textSize="18dp"
+                    android:id="@+id/name"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"/>
+                <RatingBar
+                    android:id="@+id/rate1"
+                    android:layout_gravity="center"
+                    android:layout_width="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvrate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:text="Rating" />
+                <!--  <RadioGroup
+                      android:id="@+id/radioGroup"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="24dp"
+                      android:layout_marginLeft="24dp"
+                      android:layout_marginTop="24dp"
+                      android:layout_marginEnd="24dp"
+                      android:layout_marginRight="24dp"
+                      android:orientation="vertical">
+
+                      <RadioButton
+                          android:id="@+id/rbCIP"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="10dp"
+                          android:drawablePadding="10dp"
+                          android:padding="10dp"
+                          android:text="Late Delivery" />
+
+                      <RadioButton
+                          android:id="@+id/rbFBD"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="10dp"
+                          android:drawablePadding="10dp"
+                          android:padding="10dp"
+                          android:text="Less Product Quality" />
+
+                      <RadioButton
+                          android:id="@+id/rbBM"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="10dp"
+                          android:drawablePadding="10dp"
+                          android:padding="10dp"
+                          android:text="Product cost issue" />
+
+                      <RadioButton
+                          android:id="@+id/rbOtherReason"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="10dp"
+                          android:drawablePadding="10dp"
+                          android:padding="10dp"
+                          android:text="Other" />
+                  </RadioGroup>-->
+
+                <EditText
+                    android:id="@+id/txtreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginRight="36dp"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="Your Reviews"
+                    android:inputType="textMultiLine"
+                    android:padding="15dp" />
+
+                <Button
+                    android:id="@+id/btnreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/blue"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Submit Reviews &amp; Rating"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

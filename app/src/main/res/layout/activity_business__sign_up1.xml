@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent"
+    tools:context=".Business.SignUp.Business_SignUp1">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:elevation="5dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:id="@+id/back"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back"
+            android:text="Sign Up"
+            android:textSize="22dp"
+            android:layout_marginLeft="70dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:layout_height="match_parent"
+        android:elevation="3dp"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/custom_back"
+            android:orientation="vertical"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                style="@style/MyTextview"
+                android:text="Upload logo"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/iv_singleimage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/add"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/custom_back"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/MyTextview"
+                    android:text="Upload Images"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    style="@style/MyTextview1"
+                    android:text=" (you can select multiple Images)"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivGallery"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:tint="@color/colorGrey"
+                android:background="@drawable/add"
+                />
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gv"
+                android:numColumns="5"
+                android:layout_below="@+id/rl_text"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView
+                style="@style/MyTextview"
+                android:text="Enter Location With:"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <Button
+                android:id="@+id/testbtn"
+                android:layout_weight="50"
+                style="@style/MyButton"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="GET LOCATION"
+                android:elevation="5dp"
+                android:textColor="@color/colorWhite"
+                android:background="#56C4D1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="OR"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/btn_googlemaps"
+                android:layout_weight="50"
+                style="@style/MyButton"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="google maps"
+                android:visibility="gone"
+                android:elevation="5dp"
+                android:textColor="@color/colorWhite"
+                android:background="#D45B3C"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:text="What is this?"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/learnmore"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:text="Learn More"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/custom_back"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp">
+            <TextView
+                style="@style/MyTextview"
+                android:text="Choose Area"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:visibility="visible"
+                style="@style/MyEdittext"
+                android:id="@+id/spin_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="your restaurant name"
+
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/custom_back"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                style="@style/MyEdittext"
+                android:id="@+id/txt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="address will be shown here"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="80dp">
+            <Button
+                android:id="@+id/btn_Save"
+                style="@style/MyButton"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="SignUp"
+                android:elevation="5dp"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

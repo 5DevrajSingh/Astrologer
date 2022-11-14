@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                       
+
+
+    
+
+                                           
+
+                 
+                                
+                                                                                     
+           
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true" android:tag="layout/search_experts_item_0" xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgExpert"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:tag="binding_1"                          
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/circleImageViewExpert"
+                app:srcCompat="@drawable/jyotishi" />
+
+            <com.ksbm_astroexpert.view.BoldTextView
+                android:id="@+id/txtExpertRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rarting_bg"
+                android:drawableEnd="@drawable/ic_star"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="2dp"
+                android:tag="binding_2"                  
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="@+id/imgExpert"
+                app:layout_constraintRight_toRightOf="@+id/imgExpert"
+                app:layout_constraintTop_toBottomOf="@+id/imgExpert"
+                tools:text="4.5" />
+
+            <com.ksbm_astroexpert.view.BoldTextView
+                android:id="@+id/txtExpertName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:tag="binding_3"                  
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/imgExpert"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/app_name" />
+
+            <com.ksbm_astroexpert.view.NormalTextView
+                android:id="@+id/txtExpertExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:tag="binding_4"           
+                                                
+                android:maxLines="1"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/imgExpert"
+                app:layout_constraintTop_toBottomOf="@+id/txtExpertName"
+                tools:text="Exp: 25+ years" />
+
+            <com.ksbm_astroexpert.view.NormalTextView
+                android:id="@+id/txtRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:tag="binding_5"                             
+                                               
+                android:maxLines="1"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/imgExpert"
+                app:layout_constraintTop_toBottomOf="@+id/txtExpertExp"
+                tools:text="₹26/minute" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+         
